@@ -1,0 +1,74 @@
+<div class="main">
+    <!-- {overlap ? 
+        <motion.div 
+          class={classoverlap}
+          variants={buttonVariants}
+          initial="hidden"
+          animate="visible"
+        >
+  
+        </motion.div> 
+    : null}
+  
+    {cartDisplayed ? <Cart 
+            cartDisplayed={cartDisplayed} 
+            handleOpenCart={handleOpenCart}
+            handleCloseCart={handleCloseCart}
+            cart={cart}
+            cartAmount={cartAmount}
+            handleHover={handleHover}
+            hoverState={hoverState}
+            clearCart={clearCart}
+            handleRemoveFromCart={handleRemoveFromCart}
+            openGamePage={openGamePage}
+    /> : null} -->
+      <div class="home">
+  
+              <!-- <video autoPlay muted loop class="video">
+                <source src={require("../../Resources/image/pyke.mp4")} type="video/mp4" />
+              </video> -->
+              <div class="video"></div>
+  
+              <!-- <NavBar 
+                handleHover={handleHover} 
+                hoverState={hoverState}
+                browsing={browsing}
+                handleBrowse={handleBrowse}
+                handleHome={handleHome}
+                landingPage={landingPage}
+                cartAmount={cartAmount}
+                handleOpenCart={handleOpenCart}
+                handleCloseCart={handleCloseCart}
+              /> -->
+              <div class="container">
+                  <div class="left">
+                      <div class="splash">
+                        <h1>Music Store</h1>
+                        <p class="intro">The best destination to buy new games to competitive prices. 24 hour support, "best price" guarantee and a flawless UX. Wish for more? Tell us <span class={classhere}>below</span> — or check out our <span class={classcareers}>careers.</span></p>
+                      </div>
+  
+                      <div class="buttons">
+                            <button class="cta browseBtn" onClick={} aria-label="Browse">
+                              <!-- <Enter class={classctaSVG} /> -->
+                              Browse
+                            </button>
+                            <button class="cta" onClick={handlePlayDice} aria-label="Open random game page">
+                              <!-- <Dice class="ctaSVG" /> -->
+                              Play Dice
+                            </button>
+                            <a href="https://github.com/gianlucajahn/react-ecommerce-store" target="_blank"><button class="cta" aria-label="View Repository">
+                              <!-- <GitHubLogo class="ctaSVG" /> -->
+                              GitHub
+                            </button></a>
+                            <a href="https://www.linkedin.com/in/gianlucajahn/" target="_blank"><button class="cta lastChild" aria-label="Open LinkedIn">
+                              <!-- <LinkedIn class="ctaSVG linkedin" /> -->
+                              <span>LinkedIn</span>
+                            </button></a>
+                      </div>
+                  </div>
+  
+
+                  <app-gr-navigation></app-gr-navigation>
+              </div>
+      </div>
+  </div>
