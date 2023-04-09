@@ -1,0 +1,1 @@
+declare function myFunction(param1: any, param2: any): any;

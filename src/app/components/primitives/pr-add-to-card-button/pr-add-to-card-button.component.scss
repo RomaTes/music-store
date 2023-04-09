@@ -1,0 +1,37 @@
+:host{
+    >.button{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        >*{
+            cursor: pointer;
+        }
+        >.title{
+            color: #999;
+            font-family: GT Light;
+            font-size: 18px;
+            transition: color .3s ease-out;
+            &.added{
+                color: #90ee90;
+            }
+        }
+        >.svg-icon{
+            fill: #999;
+            height: 11px;
+            transition: fill .3s ease-out;
+            width: 11px;
+            margin-left: 6px;
+            &.check{
+                fill:#90ee90;
+            }
+        }
+        &:hover{
+            >.title{
+                color: #45c1bc;
+            }
+            >.svg-icon{
+                fill: #45c1bc;
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+:host{
+    .card {
+        background-color: #202020;
+        grid-column: auto;
+        border: 1px transparent;
+        transition: 0.3s all;
+        border-radius: 25px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        height: 100%;
+        >.img-wrapper{
+            position: relative;
+            width:100%;
+            height: fit-content;
+            >.img{
+                width: 100%;
+                position: absolute;
+                align-self: center;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+
+                // height: 100%;
+                // max-width: 100%;
+                // height: 70%;
+                // width: auto;
+         
+
+            }
+            &:before{
+                content: '';
+                display: block;
+                padding-top: 70%;
+            }
+        }
+        >.rows-wrapp{
+            >.price{
+                //width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: #ccc;
+                font-family: GT Light;
+                font-size: 16px;
+                margin: 15px;
+            }
+            >.name{
+                color: white;
+                font-family: GT Bold;
+                font-size: 24px;
+                margin: 0 15px 50px;
+            }
+            >.like{
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                bottom: 20px;
+                right: 15px;
+                cursor: pointer;
+                
+                >.likeSVG{
+                    transition: fill 0.5s;
+                    fill: rgb(204, 204, 204);
+                }
+                &:hover{
+                    >.likeSVG{
+                        fill: red;
+                    }
+                }
+            }
+        }
+
+        &:hover{
+            background-color: #2d2d2d;
+            transform: scale(1.015);
+        }
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .name {
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .name {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .name {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .name {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .name {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .name {
+        font-size: 40px;
+    }
+
+    .card img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .name {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .name {
+        font-size: 26px;
+    }
+}

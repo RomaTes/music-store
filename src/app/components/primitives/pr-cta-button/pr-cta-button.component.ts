@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 // import browseSvg from '../pr-cta-button/browse.svg';
 
 @Component({
@@ -8,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrCtaButtonComponent implements OnInit {
 
+  @Input() text!: string;
+  @Input() svgName!: string;
+
+  @Output() closed: EventEmitter<string[]> = new EventEmitter();
+
   constructor() { }
   linkSVg: string = '';
 
   ngOnInit(): void {
-     //this.linkSVg = require(`./browse.svg`);
+
+  }
+
+  clickButon(){
+
   }
 
 }

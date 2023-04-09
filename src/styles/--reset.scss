@@ -1,0 +1,90 @@
+*{
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: none;
+}
+
+app-root {
+  display: block;
+}
+
+//--reset-component
+
+*::selection {
+  // background-color: $color-M0;
+  // color: $color-W0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  height: 0;
+  width: 0;
+  -webkit-appearance: none;
+}
+
+// @include font-smoothing(on);
+
+:hover, :focus, :active {
+  outline: none;
+  text-decoration: none;
+  // border-style: none;
+}
+
+/* Hide Play button + controls on iOS */
+video::-webkit-media-controls {
+  display:none !important;
+}
+
+img{
+  box-sizing: border-box;
+}
+
+// @include placeholder($color-M0);
+
+ul {
+  padding: 0;
+}
+
+input, textarea, fieldset {
+  border: 0;
+  outline: none;
+  resize: none;
+  -ms-overflow-style: none;
+}
+
+a, b, p, h1, h2, h3, h4, h5, h6, ul, span {
+  cursor: auto;
+  // color: $color-M0;
+  text-rendering: optimizeLegibility;
+}
+
+a, li, ul, span, div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+b,em,i,small,strong,sub,sup,ins,del,mark,code,kbd,samp,var,pre,abbr,bdo,q,cite,blockquote,dfn,br,hr,p,h1,h2,h3,h4,h5,h6,p,a,li,ul,div,wbr{
+  -webkit-font-smoothing: antialiased;
+  // color: $color-M0;
+}
+
+img {
+  //@include noselection;
+}
+
+a, a:visited, a:focus, a:active, a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}

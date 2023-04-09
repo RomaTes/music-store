@@ -1,0 +1,60 @@
+:host{
+    display: flex;
+    padding: 40px 0 30px;
+    justify-content: space-between;
+    >.left-part{
+        display: flex;
+        align-items: center;
+   
+        >.button{
+            height: fit-content;
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            color: #fff;
+            font-family: GT Light;
+            font-size: 15px;
+            letter-spacing: 1px;
+            padding: 12px 28px;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:first-child{
+                margin-right: 25px;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    >.right-part{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        >p{
+            color: #ccc;
+            font-family: GT Light;
+            font-size: 18px;
+        }
+        >.grid-row{
+            background:#2d2d2d;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+            >svg{
+                fill: #8d8c8c;
+                transition: all 0.3s;
+            }
+            &:hover{
+                >svg{
+                    fill: white;
+                }
+            }
+        }
+    }
+}

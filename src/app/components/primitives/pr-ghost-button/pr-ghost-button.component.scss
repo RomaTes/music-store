@@ -1,0 +1,22 @@
+:host{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    >*{
+        user-select: none;
+        cursor: pointer;
+    }
+    >.ctaSVG{
+        width: 36px;
+        height: 36px;
+    }
+    >p{
+        color: #fff;
+        font-family: GT Bold;
+    }
+    &:hover{
+        transform: scale(1.2);
+    }
+}
