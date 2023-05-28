@@ -1,0 +1,79 @@
+:host{
+    .left
+     {
+        // width: 50vw;
+        // height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .left .buttons .browseBtn {
+        background-color: #45c1bc;
+    }
+    
+    .splash {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 630px;
+        height: 240px;
+        box-sizing: border-box;
+        padding: 22px 35px 55px 50px;
+        //margin-left: 44px;
+        border-radius: 30px;
+        z-index: 6;
+        backdrop-filter: blur(8px);
+    }
+    
+    .buttons {
+        display: flex;
+        position: relative;
+        width: 630px;
+        height: 70px;
+        box-sizing: border-box;
+        padding: 14px 20px 15px 20px;
+        //margin-left: 44px;
+        margin-top: 15px;
+        border-radius: 30px;
+        z-index: 6;
+        backdrop-filter: blur(8px);
+        justify-content: space-between;
+    }
+    
+
+    
+    .buttons::after,
+    .splash::after {
+        content: "";
+        position: absolute;
+        border-radius: 30px;
+        inset: 0.01%;
+        height: inherit;
+        width: inherit;
+        z-index: -1;
+        background-color: white;
+        opacity: 0.285;
+    }
+    
+    .intro {
+        color: white;
+        padding-left: 5px;
+        //font-family: "GT Regular";
+        font-family: 'Sedgwick Ave Display', cursive;
+        font-size: 19px;
+        opacity: 1;
+    }
+    
+    .splash h1 {
+        font-family: "GT Bold";
+        font-family: 'Sedgwick Ave Display', cursive;
+        font-size: 90px;
+        color: white;
+    }
+    
+    .home h2 {
+        color: white;
+        font-family: "GT Bold";
+    }
+}

@@ -2,6 +2,11 @@
     max-width: 1440px;
     display: block;
     margin: auto;
-    display: flex;
+    >div{
+        display: flex;
+    }
     padding: 25px 50px 20px;
+}
+.body{
+    background: linear-gradient(to bottom, #000000, #1a0d0d, #331a1a, #4d2626, #664040);
 }

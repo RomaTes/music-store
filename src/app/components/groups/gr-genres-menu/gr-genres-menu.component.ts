@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
+
 
 @Component({
   selector: 'app-gr-genres-menu',
@@ -18,9 +20,17 @@ export class GrGenresMenuComponent implements OnInit {
     { name: "Classical", icon: "assets/image/RPG.svg" }
 ];
 
-  constructor() { }
+  constructor(
+    private productService: ProductService
+  ) {
+    this.productService = productService;
+  }
 
   ngOnInit(): void {
+  }
+
+  selectGenre(item: any) {
+    this.productService.subject.next(item);
   }
 
 }

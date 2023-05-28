@@ -2,10 +2,12 @@
     <h2>Trending and interesting</h2>
     <app-gr-filter-row></app-gr-filter-row>
     <div class="cards-grid">
-        <ng-container *ngFor="let item of games; let i = index"
-        >
+        <!-- <ng-container *ngFor="let item of filteredGames; let i = index; trackBy: trackByFn"
+        > -->
+        <div *ngFor="let item of filteredGames; let i = index;">
             <app-gr-product-card [game]="item"></app-gr-product-card>
-        </ng-container>
+        </div>
+        <!-- </ng-container> -->
         
         <!-- <app-gr-product-card></app-gr-product-card>
         <app-gr-product-card></app-gr-product-card>

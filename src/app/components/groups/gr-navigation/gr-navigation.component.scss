@@ -10,13 +10,15 @@
             border-radius: 20px;
             padding: 22px 30px 30px 30px;
             box-sizing: border-box;
-            gap: 5px;
             display: flex;
             flex-direction: column;
+            gap: 8px;
             backdrop-filter: blur(6px);
             >.title{
                 color: white;
                 font-family: "GT Bold";
+                font-family: 'Sedgwick Ave Display', cursive;
+                margin-bottom: 14px;
             }
             &::after{
                 content: "";

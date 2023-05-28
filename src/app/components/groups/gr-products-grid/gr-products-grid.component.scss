@@ -1,5 +1,6 @@
 :host{
     width: 100%;
+    
     >.wrapper{
         >h2{
             font-family: GT Bold;
@@ -11,6 +12,21 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             column-gap: 20px;
             row-gap: 20px;
+            >div{
+                opacity: 0;
+                animation: cardAppeareance 0.6s ease-in forwards;
+            }
         }
     }
 }
+@keyframes cardAppeareance {
+    0% {
+      opacity: 0;
+      transform: translateY(40%);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

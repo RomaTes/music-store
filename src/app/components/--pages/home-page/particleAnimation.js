@@ -79,7 +79,7 @@ export default function particleAnimation() {
     }
 
     function mouseMove(e) {
-        console.log(e);
+       // console.log(e);
         var posx = 0, posy = 0;
         if (e.pageX || e.pageY) {
             posx = e.pageX;

@@ -1,18 +1,27 @@
 :host{
     .card {
-        background-color: #202020;
+        background-color: #5e2323;
         grid-column: auto;
         border: 1px transparent;
         transition: 0.3s all;
-        border-radius: 25px;
+        border-radius: 5px;
         overflow: hidden;
         cursor: pointer;
         position: relative;
         height: 100%;
+        box-shadow: 4px 3px 3px #181616;
+        //box-shadow:  4px 3px 3px #4a2020;
+        //opacity: 0;
+        // animation: cardAppeareance 0.6s ease-in forwards;
+        >.wrapper{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         >.img-wrapper{
             position: relative;
             width:100%;
             height: fit-content;
+            transition: all 0.3s;
             >.img{
                 width: 100%;
                 position: absolute;
@@ -21,13 +30,6 @@
                 top: 0;
                 left: 0;
                 object-fit: cover;
-
-                // height: 100%;
-                // max-width: 100%;
-                // height: 70%;
-                // width: auto;
-         
-
             }
             &:before{
                 content: '';
@@ -36,29 +38,49 @@
             }
         }
         >.rows-wrapp{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
             >.price{
                 //width: 100%;
                 display: flex;
+                flex-direction: row-reverse;
                 align-items: center;
                 justify-content: space-between;
                 color: #ccc;
                 font-family: GT Light;
                 font-size: 16px;
-                margin: 15px;
+                padding: 15px;
             }
             >.name{
+                flex-grow: 1;
                 color: white;
-                font-family: GT Bold;
+                font-family: Sedgwick Ave Display;
                 font-size: 24px;
-                margin: 0 15px 50px;
+                margin: 0 15px 5px;
+                &:not(:first-of-type){
+                    margin: 0 15px 5px;
+                    font-size: 12px;
+                }
+            }
+            >.name2{
+                color: white;
+                font-family: Sho;
+                font-size: 12px;
+                margin: 0 15px 5px;
             }
             >.like{
                 width: 25px;
                 height: 25px;
-                position: absolute;
-                bottom: 20px;
-                right: 15px;
+                //position: absolute;
+                // bottom: 20px;
+                // right: 15px;
+                margin: auto 15px 10px auto;
                 cursor: pointer;
+                >svg{
+                    height: 25px;
+                    width: 25px;
+                }
                 
                 >.likeSVG{
                     transition: fill 0.5s;
@@ -71,13 +93,30 @@
                 }
             }
         }
+    }
 
         &:hover{
-            background-color: #2d2d2d;
+            background-color: #892c2c;
             transform: scale(1.015);
+            >.wrapper{
+                >.img-wrapper {
+                    transform: scale(1.05);
+                }
+            }
         }
     }
 }
+@keyframes cardAppeareance {
+    0% {
+      opacity: 0;
+      transform: translateY(40%);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 @media screen and (max-width: 1700px) {
     .name {

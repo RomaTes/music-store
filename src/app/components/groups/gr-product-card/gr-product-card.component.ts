@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-gr-product-card',
@@ -8,13 +10,20 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GrProductCardComponent implements OnInit {
 
   @Input() game!: any;
+  
 
   addedToCart: boolean = true;
 
-  constructor() { }
+  constructor(
+    // private selectedItemSubscriber: Subscription,
+    // private productService: ProductService
+  ) { }
 
   ngOnInit(): void {
     console.log(this.game);
+    // this.selectedItemSubscriber = this.productService.subject.subscribe(config => {
+    //   console.log(config);
+    // });
   }
 
   addedToCardHandler(state: boolean) {

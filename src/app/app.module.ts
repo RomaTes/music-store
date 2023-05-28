@@ -14,6 +14,11 @@ import { GrProductsGridComponent } from './components/groups/gr-products-grid/gr
 import { PrAddToCardButtonComponent } from './components/primitives/pr-add-to-card-button/pr-add-to-card-button.component';
 import { GrGenresMenuComponent } from './components/groups/gr-genres-menu/gr-genres-menu.component';
 import { GrFilterRowComponent } from './components/groups/gr-filter-row/gr-filter-row.component';
+import { GrMainTitleComponent } from './components/groups/gr-main-title/gr-main-title.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductPageComponent } from './components/--pages/product-page/product-page.component';
+import { GrGameInfoComponent } from './components/groups/gr-game-info/gr-game-info.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +33,15 @@ import { GrFilterRowComponent } from './components/groups/gr-filter-row/gr-filte
     GrProductsGridComponent,
     PrAddToCardButtonComponent,
     GrGenresMenuComponent,
-    GrFilterRowComponent
+    GrFilterRowComponent,
+    GrMainTitleComponent,
+    ProductPageComponent,
+    GrGameInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
