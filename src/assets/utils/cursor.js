@@ -1,6 +1,6 @@
 
 export function Cursor() {
-    console.log("sdfs");
+
     var cursor = document.querySelector('.cursor');
     var cursorinner = document.querySelector('.cursor2');
     var a = document.querySelectorAll('a');

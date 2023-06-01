@@ -19,6 +19,12 @@ import { GrMainTitleComponent } from './components/groups/gr-main-title/gr-main-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductPageComponent } from './components/--pages/product-page/product-page.component';
 import { GrGameInfoComponent } from './components/groups/gr-game-info/gr-game-info.component';
+// import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environments/environment';
+import { PrSignInComponent } from './components/primitives/pr-sign-in/pr-sign-in.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +42,16 @@ import { GrGameInfoComponent } from './components/groups/gr-game-info/gr-game-in
     GrFilterRowComponent,
     GrMainTitleComponent,
     ProductPageComponent,
-    GrGameInfoComponent
+    GrGameInfoComponent,
+    PrSignInComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
